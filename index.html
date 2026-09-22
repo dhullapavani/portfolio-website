@@ -1,99 +1,1376 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pavani Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-    body{line-height:1.6;background:#f5f5f5;color:#333;}header{background:linear-gradient(135deg,#0f9b0f,#1db954);color:#fff;padding:40px 20px;text-align:center;}
-header img{border-radius:50%;margin-top:10px;}
-header h1{font-size:2.5rem;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.btn{display:inline-block;margin:10px;padding:10px 20px;background:#fff;color:#0f9b0f;border-radius:25px;text-decoration:none;}
+    <title>Dhulla Pavani | AI/ML & Full Stack Developer</title>
 
-nav{display:flex;justify-content:center;background:#222;padding:10px;flex-wrap:wrap;}
-nav a{color:#fff;margin:10px;text-decoration:none;}
+    <meta name="description"
+        content="Dhulla Pavani - B.Tech AI & ML student passionate about Artificial Intelligence, Generative AI and Full Stack Development.">
 
-section{padding:40px 20px;max-width:900px;margin:auto;}
-h2{margin-bottom:20px;color:#0f9b0f;}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-.skills span{display:inline-block;background:#1db954;color:#fff;padding:8px 12px;margin:5px;border-radius:20px;}
+    <style>
 
-.project,.service{background:#fff;padding:15px;margin-bottom:15px;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.1);} 
+        /* =========================
+           GLOBAL
+        ========================= */
 
-footer{text-align:center;padding:20px;background:#222;color:#fff;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-.dark-mode{background:#121212;color:#fff;}
+        body {
+            line-height: 1.7;
+            background: #f7f8fc;
+            color: #222;
+            transition: 0.3s;
+        }
 
-.toggle{position:fixed;top:10px;right:10px;padding:10px;cursor:pointer;background:#000;color:#fff;border-radius:50%;}
+        a {
+            text-decoration: none;
+        }
 
-@media(max-width:768px){header h1{font-size:2rem;}}
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-  </style>
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 5%;
+
+            background: #111827;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo {
+            color: #22c55e;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 5px 10px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #22c55e;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        header {
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+            background:
+                linear-gradient(135deg, #052e16, #166534, #22c55e);
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-greeting {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            max-width: 700px;
+            margin: 15px auto;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 20px 0;
+        }
+
+        #typing {
+            font-size: 1.1rem;
+            font-weight: 600;
+            min-height: 30px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            margin: 7px;
+            padding: 11px 22px;
+
+            border-radius: 30px;
+
+            background: white;
+            color: #15803d;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-dark {
+            background: #111827;
+            color: white;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+
+            color: #15803d;
+
+            font-size: 2rem;
+
+            margin-bottom: 45px;
+        }
+
+        .section-title::after {
+            content: "";
+
+            display: block;
+
+            width: 60px;
+            height: 4px;
+
+            background: #22c55e;
+
+            margin: 10px auto;
+
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+
+            text-align: center;
+
+            font-size: 1.05rem;
+        }
+
+        .about p {
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+   AREAS OF INTEREST
+========================= */
+
+.interests-content {
+    max-width: 900px;
+    margin: auto;
+
+    background: white;
+
+    padding: 25px 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.interests-content p {
+    font-size: 1.05rem;
+    line-height: 2;
+}
+
+body.dark-mode .interests-content {
+    background: #1e293b;
+    color: #e5e7eb;
+}
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #15803d;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+        }
+
+        .project h3 {
+            color: #15803d;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .tech {
+            margin-top: auto;
+            margin-bottom: 15px;
+        }
+
+        .tech span {
+            display: inline-block;
+
+            background: #dcfce7;
+            color: #166534;
+
+            padding: 5px 9px;
+
+            border-radius: 15px;
+
+            font-size: 0.75rem;
+
+            margin: 3px;
+        }
+
+        .project-links a {
+            color: #15803d;
+
+            font-weight: 600;
+
+            margin-right: 15px;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience-card {
+            background: white;
+
+            padding: 25px;
+
+            margin-bottom: 20px;
+
+            border-left: 5px solid #22c55e;
+
+            border-radius: 10px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+        }
+
+        .experience-card h3 {
+            color: #15803d;
+        }
+
+        .experience-card h4 {
+            margin: 5px 0 10px;
+        }
+
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================= */
+
+        .achievement-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+        }
+
+        .achievement-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .achievement-card h3 {
+            color: #15803d;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-card {
+            max-width: 750px;
+
+            margin: auto;
+
+            text-align: center;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .education-card h3 {
+            color: #15803d;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px;
+        }
+
+        .contact-links {
+            margin-top: 25px;
+        }
+
+        .contact-links a {
+            display: inline-block;
+
+            margin: 7px;
+
+            padding: 10px 20px;
+
+            border-radius: 25px;
+
+            background: #15803d;
+
+            color: white;
+
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: #166534;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 25px;
+
+            background: #111827;
+
+            color: white;
+        }
+
+
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        .toggle {
+            position: fixed;
+
+            right: 20px;
+            bottom: 20px;
+
+            z-index: 2000;
+
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+
+            background: #111827;
+            color: white;
+
+            cursor: pointer;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode {
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        body.dark-mode .skill-card,
+        body.dark-mode .project,
+        body.dark-mode .experience-card,
+        body.dark-mode .achievement-card,
+        body.dark-mode .education-card {
+            background: #1e293b;
+
+            color: #e5e7eb;
+        }
+
+        body.dark-mode .project h3,
+        body.dark-mode .skill-card h3,
+        body.dark-mode .achievement-card h3,
+        body.dark-mode .experience-card h3,
+        body.dark-mode .education-card h3 {
+            color: #4ade80;
+        }
+
+        body.dark-mode .tech span {
+            background: #14532d;
+            color: #bbf7d0;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 8px;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+                margin: 4px 6px;
+            }
+
+            header h1 {
+                font-size: 2.3rem;
+            }
+
+            header h2 {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+        }
+
+    </style>
 </head>
-<body><div class="toggle" onclick="toggleMode()">🌙</div><header>
-  <h1>Hi, I'm Pavani</h1>
-  <img src="https://res.cloudinary.com/duk04pixv/image/upload/f_auto,q_auto/p_tainyg" alt="Pavani Photo" width="120" class="profile-img">
-  <p id="typing"></p>
-  <a href="#projects" class="btn">View Projects</a>
-</header><nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#services">Services</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav><section id="about">
-  <h2>About Me</h2>
-  <p>I am a BTech student Specializing in Artifical Intelligence and Machine Learning.I Passionate about creating modern web applications,teaching and learning new technologies. I love building creative websites and helping students learn effectively. For a detail overview of my Projects,Activities and Achievements,please visit my Linkedin Profile</p>
-</section><section id="skills">
-  <h2>Skills & Experiences </h2>
-  <div class="skills & Experiences">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>Python</span>
-    <span>Java</span>
-    <span>Git & GitHub</span>
-    <span>Responsive Design</span>
-    <span>VS Code</span>
-    <span>Canva</span>
-    <span>Excel</span>
-  </div>
-</section><section id="services">
-  <h2>Services</h2>
-  <div class="service">
-    <h3>Home Tuitions</h3>
-    <p>I provide tuitions for all subjects up to 12th class with easy explanations and concept clarity.</p>
-  </div>
-  <div class="service">
-    <h3>Web Development</h3>
-    <p>Creating responsive and modern websites using HTML, CSS, and JavaScript.</p>
-  </div>
-</section><section id="projects">
-  <h2>Projects</h2>
-  <div class="project">
-    <h3>Portfolio Website</h3>
-    <p>Built using HTML, CSS, JavaScript.</p>
-  </div>
-</section><section id="contact">
-  <h2>Get in Touch</h2>
-  <p>Email: pavanidulla090@gmail.com</p>
-  <p>Linkedin: www.linkedin.com/in/dhulla-pavani-8a7316340</p>
-</section><footer>
-  <p>© 2026 Pavani | All Rights Reserved</p>
-</footer><script>
-  const text = "WEB DEVOPLER | INNOVATOR| CREATOR";
-  let i = 0;
-  function typingEffect(){
-    if(i < text.length){
-      document.getElementById("typing").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typingEffect,50);
-    }
-  }
-  typingEffect();
 
-  function toggleMode(){document.body.classList.toggle("dark-mode");}
-</script></body>
+
+<body>
+
+    <!-- DARK MODE -->
+    <div class="toggle" onclick="toggleMode()">🌙</div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav>
+
+        <div class="logo">
+            Dhulla Pavani
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#achievements">Achievements</a>
+
+            <a href="#education">Education</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <header id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-greeting">
+                Hello, I'm
+            </p>
+
+            <h1>
+                Dhulla Pavani
+            </h1>
+
+            <img
+                src="https://res.cloudinary.com/duk04pixv/image/upload/f_auto,q_auto/p_tainyg"
+                alt="Dhulla Pavani"
+                class="profile-img"
+            >
+
+            <h2>
+                B.Tech AIML Student | AI/ML | Full Stack Development | Generative AI | Data Analyst
+            </h2>
+
+            <p id="typing"></p>
+
+            <p>
+                Passionate about building intelligent, practical and
+                user-focused applications using Artificial Intelligence,
+                Machine Learning and modern web technologies.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    href="https://github.com/dhullapavani"
+                    target="_blank"
+                    class="btn"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/dhulla-pavani-8a7316340/"
+                    target="_blank"
+                    class="btn"
+                >
+                    LinkedIn
+                </a>
+
+                <a
+                    href="resume.pdf"
+                    target="_blank"
+                    class="btn"
+                >
+                    Resume
+                </a>
+
+                <a
+                    href="#projects"
+                    class="btn btn-dark"
+                >
+                    View Projects
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="about">
+
+                <p>
+                    I am a third-year B.Tech student specializing in
+                    Artificial Intelligence and Machine Learning at
+                    Sri Indu College of Engineering and Technology,
+                    with a CGPA of 8.0.
+                </p>
+
+                <p>
+                    I am interested in Artificial Intelligence,
+                    Machine Learning, Generative AI and Full Stack
+                    Development. I enjoy transforming real-world
+                    problems into practical technology solutions.
+                </p>
+
+                <p>
+                    I have worked on projects involving AI-powered
+                    career guidance, intelligent transportation,
+                    legal technology, resume analysis and web data
+                    extraction. I also actively participate in
+                    hackathons, technical workshops and learning
+                    programs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     AREAS OF INTEREST
+========================= -->
+
+<section id="interests">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Areas of Interest
+        </h2>
+
+        <div class="interests-content">
+
+            <p>
+                Artificial Intelligence & Machine Learning |
+                Generative AI |
+                Data Analytics |
+                Full-Stack Development |
+                Web Development |
+                AI Product Development
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Technical Skills
+            </h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <h3>Programming</h3>
+
+                    <p>
+                        Python, C, JavaScript
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        HTML, CSS, Node.js, Next.js
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>AI & Machine Learning</h3>
+
+                    <p>
+                        Artificial Intelligence,
+                        Machine Learning, Generative AI
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>Database</h3>
+
+                    <p>
+                        SQL, Database Management
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>Tools</h3>
+
+                    <p>
+                        Git, GitHub, VS Code
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Featured Projects
+            </h2>
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project">
+
+                    <h3>
+                        AI CareerPilot
+                    </h3>
+
+                    <p>
+                        AI-powered career guidance platform that
+                        analyzes resumes, identifies skill gaps,
+                        matches users with relevant jobs, generates
+                        learning roadmaps and supports interview
+                        preparation.
+                    </p>
+
+                    <div class="tech">
+
+                        <span>Next.js</span>
+                        <span>TypeScript</span>
+                        <span>AI</span>
+                        <span>Prisma</span>
+                        <span>Generative AI</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/dhullapavani"
+                            target="_blank"
+                        >
+                            GitHub →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project">
+
+                    <h3>
+                        SmartCommute-AI
+                    </h3>
+
+                    <p>
+                        Intelligent commute planning and crowd
+                        prediction platform designed to help
+                        commuters choose better routes across
+                        buses, trains and metro systems.
+                    </p>
+
+                    <div class="tech">
+
+                        <span>Next.js</span>
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>PostgreSQL</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/dhullapavani"
+                            target="_blank"
+                        >
+                            GitHub →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project">
+
+                    <h3>
+                        Nyaya Trace
+                    </h3>
+
+                    <p>
+                        AI-powered legal technology project designed
+                        to help users understand legal information
+                        through intelligent search, document analysis
+                        and AI-assisted explanations.
+                    </p>
+
+                    <div class="tech">
+
+                        <span>AI</span>
+                        <span>RAG</span>
+                        <span>LLM</span>
+                        <span>Web Development</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/dhullapavani/Nyaya-Trace"
+                            target="_blank"
+                        >
+                            GitHub →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 4 -->
+
+                <!-- PROJECT 4 -->
+
+<div class="project">
+
+    <h3>
+        Hospital Management System
+    </h3>
+
+    <p>
+        A web-based hospital management system designed to
+        simplify the management of patients, doctors,
+        appointments and hospital-related information.
+    </p>
+
+    <div class="tech">
+
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Database</span>
+
+    </div>
+
+    <div class="project-links">
+
+        <a
+            href="https://github.com/dhullapavani/hospital.gits"
+            target="_blank"
+        >
+            GitHub →
+        </a>
+
+    </div>
+
+</div>
+                </div>
+
+
+                <!-- PROJECT 5 -->
+
+                <div class="project">
+
+                    <h3>
+                        Book Market Intelligence Scraper
+                    </h3>
+
+                    <p>
+                        Python-based web scraping project that
+                        collects book information including titles,
+                        prices, ratings, availability and categories
+                        for market analysis.
+                    </p>
+
+                    <div class="tech">
+
+                        <span>Python</span>
+                        <span>BeautifulSoup</span>
+                        <span>Requests</span>
+                        <span>Pandas</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/dhullapavani/CodeAlpha-Task1-WebScraping"
+                            target="_blank"
+                        >
+                            GitHub →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Experience & Programs
+            </h2>
+
+
+            <div class="experience-card">
+
+                <h3>
+                    Web Scraping Intern — CodeAlpha
+                </h3>
+
+                <h4>
+                    Python • Web Scraping • Data Analysis
+                </h4>
+
+                <p>
+                    Developed a Python-based web scraping solution
+                    using Requests, BeautifulSoup and Pandas to
+                    collect and analyze structured book-market data.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <h3>
+                    AI Learning & Development Programs
+                </h3>
+
+                <p>
+                    Participated in technical learning programs and
+                    workshops focused on Artificial Intelligence,
+                    Generative AI, Microsoft AI technologies and
+                    emerging technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACHIEVEMENTS
+    ========================= -->
+
+    <section id="achievements">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Achievements & Activities
+            </h2>
+
+            <div class="achievement-grid">
+
+
+                <div class="achievement-card">
+
+                    <h3>
+                        Smart India Hackathon
+                    </h3>
+
+                    <p>
+                        Participated in Smart India Hackathon and
+                        worked on developing a technology-based
+                        solution for a real-world problem.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card">
+
+                    <h3>
+                        MSME Hackathon
+                    </h3>
+
+                    <p>
+                        Participated in MSME Hackathon and gained
+                        experience in problem solving, ideation and
+                        collaborative development.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card">
+
+                    <h3>
+                        Microsoft AI Innovators Hub
+                    </h3>
+
+                    <p>
+                        Participated in an AI-focused learning program
+                        exploring Artificial Intelligence and
+                        Microsoft technologies.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card">
+
+                    <h3>
+                        Technical Workshops
+                    </h3>
+
+                    <p>
+                        Participated in technical workshops and
+                        learning events focused on AI, technology
+                        and professional development.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================= -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+            <div class="education-card">
+
+                <h3>
+                    B.Tech — Artificial Intelligence & Machine Learning
+                </h3>
+
+                <p>
+                    Sri Indu College of Engineering and Technology
+                </p>
+
+                <p>
+                    CGPA: 8.0
+                </p>
+
+                <p>
+                    Currently in 3rd Year
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Let's Connect
+            </h2>
+
+            <div class="contact">
+
+                <p>
+                    Interested in collaborating, discussing projects
+                    or exploring internship opportunities?
+                </p>
+
+                <p>
+                    Feel free to connect with me.
+                </p>
+
+
+                <div class="contact-links">
+
+                    <a href="mailto:pavanidulla090@gmail.com">
+                        Email
+                    </a>
+
+                    <a href="tel:+918309867533">
+                        Phone
+                    </a>
+
+                    <a
+                        href="https://github.com/dhullapavani"
+                        target="_blank"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/dhulla-pavani-8a7316340/"
+                        target="_blank"
+                    >
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Dhulla Pavani | AI/ML & Full Stack Developer
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const text =
+            "AI/ML ENTHUSIAST | FULL STACK DEVELOPER | GENERATIVE AI LEARNER";
+
+        let i = 0;
+
+        function typingEffect() {
+
+            if (i < text.length) {
+
+                document.getElementById("typing").innerHTML +=
+                    text.charAt(i);
+
+                i++;
+
+                setTimeout(typingEffect, 50);
+            }
+
+        }
+
+        typingEffect();
+
+
+        function toggleMode() {
+
+            document.body.classList.toggle("dark-mode");
+
+        }
+
+    </script>
+
+
+</body>
+
 </html>
